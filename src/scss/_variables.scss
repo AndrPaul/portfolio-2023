@@ -1,0 +1,20 @@
+/*$primary-light : #DEE2E6;
+$primary-dark : #212529;
+$secondary-light: #ADB5BD;
+$active-dark: #343A40;
+$hover-dark: #495057;
+*/
+$primary-light : #f3f8fd;
+$primary-dark : #16213E;
+$secondary-light: #ADB5BD;
+$active-dark: #0F3460;
+$hover-dark: lighten($active-dark, 5%);
+@mixin notDragable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+

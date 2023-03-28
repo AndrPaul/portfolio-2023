@@ -1,0 +1,36 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+@font-face {
+    font-family: "JetBrainsMono";
+    src: local("JetBrainsMono"),
+     url("../assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $primary-light;
+    font-family: 'JetBrainsMono', monospace;
+    color: $primary-dark;
+    
+}
+
+.section {
+    width: calc(100% - 6rem);
+    display: flex;
+}
+.page{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.secondary-text{
+    color: $hover-dark;
+}

@@ -1,0 +1,22 @@
+@import '../../scss/variables';
+
+.homepage{
+    padding: 6rem 0rem 0rem 6rem;
+
+    header{
+    position: relative;
+     img {
+        height: 5rem;
+        right: 170px;
+        top: 5px;
+        position: absolute;
+        @include notDragable;
+     }    
+    }
+}
+
+.bigTitle {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: bolder;
+}
