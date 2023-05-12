@@ -1,0 +1,60 @@
+@import '../../scss/variables';
+
+.primary-btn{
+
+    color: $primary-light;
+    text-transform: uppercase;
+    height: 3.4rem;
+    width: 12rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.1rem;
+  
+    &:hover {
+        transition: background 0.5s;
+    }
+   
+}
+
+.green {
+    background-color: $btnColor;
+    border-radius: 2px 0px 0px 2px;
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2.5px;
+        height: 3.4rem;
+        background: $primary-light;
+        right: -2.5px;
+    }
+    &:hover {
+        background-color: $hover-btnColor;
+        border-bottom: 5px solid $primary-light;
+        border-top:5px solid  $transparent;
+    }
+}
+
+.orange {
+    background-color: $secondaryBtnColor;
+    &:hover {
+        background-color: $hover-secondaryBtnColor;
+        border-bottom: 5px solid $primary-light;
+        border-top:5px solid  $transparent;
+    }
+    border-radius: 0px 2px 2px 0px;
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2.5px;
+        height: 3.4rem;
+        background: $primary-light;
+        left: -2.5px;
+    }
+}
+

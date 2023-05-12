@@ -1,36 +1,118 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
 @font-face {
-    font-family: "JetBrainsMono";
-    src: local("JetBrainsMono"),
-     url("../assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-family: "Chronicle";
+    src: url("../assets/fonts/jetbrains/Chronicle-roman.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url("../assets/fonts/jetbrains/GraphikRegular.otf") format("opentype");
     font-weight: normal;
-    }
-*{
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url("../assets/fonts/jetbrains/GraphikBold.otf") format("opentype");
+    font-weight: bold;
+}
+
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
-    background-color: $primary-light;
-    font-family: 'JetBrainsMono', monospace;
-    color: $primary-dark;
-    
+    background-color: $primary-dark;
+    font-family: $graphik;
+    color: $primary-light;
+
+    &::before,
+    &::after {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+
+    }
+
+    &::before {
+        --grad: radial-gradient(at 35% 20%, red, #{rgba(#ffffff, .4)} 50%, transparent 70%);
+        --mask: var(--grad), var(--grad), var(--grad);
+        -webkit-mask: var(--mask);
+        -webkit-mask-composite: source-in;
+        mask: var(--mask);
+        mask-composite: intersect;
+        mix-blend-mode: color;
+        content: '';
+        background: linear-gradient(#00a2ff, #0024f1 80%, );
+    }
+
+
+
+}
+
+h1 {
+    font-family: $chronicle;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: $chronicle;
+    font-weight: 400;
 }
 
 .section {
-    width: calc(100% - 6rem);
     display: flex;
-}
-.page{
-    display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50rem
 }
 
-.secondary-text{
-    color: $hover-dark;
+.page {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 6rem);
+    margin-left: 6rem;
+    padding: 4.8rem 2rem 0rem 2rem;
+}
+
+.gradient {
+    background-color: red;
+
+    &::before,
+    &::after {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        --grad: radial-gradient(at 35% 15%,
+            red, #{rgba(red, .2)} 50%, transparent 70%);
+        --mask: var(--grad), var(--grad), var(--grad);
+        -webkit-mask: var(--mask);
+        -webkit-mask-composite: source-in;
+        mask: var(--mask);
+        mask-composite: intersect;
+        mix-blend-mode: color;
+        content: ''
+    }
+
+    &::before {
+        background: #000;
+        filter: url(#f)
+    }
+
+    &::after {
+        background: linear-gradient(#ff0000, #00f1e9 80%, );
+    }
+}
+
+.outline {
+    outline: 1px solid red;
 }

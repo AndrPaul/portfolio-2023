@@ -1,14 +1,22 @@
-/*$primary-light : #DEE2E6;
-$primary-dark : #212529;
-$secondary-light: #ADB5BD;
-$active-dark: #343A40;
-$hover-dark: #495057;
-*/
-$primary-light : #f3f8fd;
-$primary-dark : #16213E;
-$secondary-light: #ADB5BD;
-$active-dark: #0F3460;
-$hover-dark: lighten($active-dark, 5%);
+$primary-light : #FFFF;
+$primary-dark : #202226;
+$secondary-light: #8D8E90;
+$primary-darker : darken($primary-dark, 5%);
+$active-dark: lighten($primary-dark, 5%);
+$hover-dark: lighten($active-dark, 10%);
+
+$btnColor: #0a86d8;
+$hover-btnColor: lighten($btnColor, 5%);
+$secondaryBtnColor: #e37e02;
+$hover-secondaryBtnColor: lighten($secondaryBtnColor, 5%);;
+
+$transparent: rgba(255, 255, 255, 0);
+
+
+$jet-brains : 'JetBrainsMono', monospace;
+$graphik : 'Graphik', sans-serif;
+$chronicle : 'Chronicle', serif;
+
 @mixin notDragable {
     user-drag: none;
     -webkit-user-drag: none;

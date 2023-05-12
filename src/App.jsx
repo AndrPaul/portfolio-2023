@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './scss/app.scss'
 import Navbar from './components/navbar/Navbar'
 import Home from './pages/home/Home'
@@ -9,7 +8,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router className="gradient">
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
