@@ -1,4 +1,12 @@
 .portfolio{
-    text-align: center;
+   text-align: right;
 
+}
+
+.card-containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
 }

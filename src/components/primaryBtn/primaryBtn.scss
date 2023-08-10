@@ -1,7 +1,6 @@
 @import '../../scss/variables';
 
-.primary-btn{
-
+.primary-btn {
     color: $primary-light;
     text-transform: uppercase;
     height: 3.4rem;
@@ -13,11 +12,10 @@
     text-decoration: none;
     position: relative;
     font-size: 1.1rem;
-  
     &:hover {
         transition: background 0.5s;
     }
-   
+
 }
 
 .green {
@@ -35,7 +33,7 @@
     &:hover {
         background-color: $hover-btnColor;
         border-bottom: 5px solid $primary-light;
-        border-top:5px solid  $transparent;
+        border-top: 5px solid $transparent;
     }
 }
 
@@ -44,7 +42,7 @@
     &:hover {
         background-color: $hover-secondaryBtnColor;
         border-bottom: 5px solid $primary-light;
-        border-top:5px solid  $transparent;
+        border-top: 5px solid $transparent;
     }
     border-radius: 0px 2px 2px 0px;
     &::after {
@@ -58,3 +56,20 @@
     }
 }
 
+@media (max-width: 586px) {
+    .primary-btn {
+        width: 100%;
+    }
+    .green {
+        border-radius: 2px;
+        &::after {
+            display: none;
+        }
+    }
+    .orange {
+        border-radius: 2px;
+        &::after {
+            display: none;
+        }
+    }
+}

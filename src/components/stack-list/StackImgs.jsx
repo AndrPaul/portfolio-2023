@@ -16,18 +16,20 @@ function StackImgs() {
     { name: 'HTML', src: HtmlLogo },
     { name: 'CSS', src: CSSLogo },
     { name: 'Sass', src: SassLogo },
-    { name: 'Javascript', src: JsLogo},
-    { name: 'React', src: ReactLogo},
+    { name: 'Javascript', src: JsLogo },
+    { name: 'React', src: ReactLogo },
     { name: 'Magnolia', src: MagnoliaLogo },
     { name: 'Foundation', src: FoundationLogo },
     { name: 'Adobe Target', src: AtLogo },
-    
+
   ];
 
   return (
     <div className='stack-logos'>
       {logos.map((logo) => (
-        <img key={logo.name} src={logo.src} alt={`${logo.name} logo`} />
+        <div className="logos-wrapper">
+          <img key={logo.name} src={logo.src} alt={`${logo.name} logo`} />
+        </div>
       ))}
     </div>
   );

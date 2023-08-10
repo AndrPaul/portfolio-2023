@@ -3,56 +3,33 @@
 .homepage {
     header {
         position: relative;
-
-        .heading-hp {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            
-        }
-
-        h1 {
-            font-size: 7rem;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
-        }
-
         img {
             height: 6rem;
             @include notDragable;
             margin-top: -2rem;
         }
-
         .subtitle {
-            margin-bottom: 2rem;
             display: flex;
             flex-direction: row;
             z-index: 88;
             position: relative;
             height: 3.2rem;
-            font-size: 2.8rem;
-
         }
     }
-
     .description-hp {
         max-width: 42rem;
         line-height: 1.5;
     }
-
     .cta-container {
         margin-top: 3rem;
         display: flex;
         justify-content: space-between;
         max-width: 389px;
     }
-
     .tech-stack-logos {
         margin-top: 8rem;
     }
 }
-
-
 
 .job-titles-wrapper {
     display: flex;
@@ -68,29 +45,49 @@
     0% {
         transform: translateY(0%);
     }
-
     10% {
         transform: translateY(-12%);
     }
-
     25% {
         transform: translateY(-0%);
     }
-
     35% {
         transform: translateY(-112%);
     }
-
     50% {
         transform: translateY(-100%);
     }
-
     65% {
         transform: translateY(-212%);
     }
-
     75% {
         transform: translateY(-200%);
     }
+}
 
+@media (max-width: 586px) {
+    .homepage {
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 125px;
+            max-width: 100%;
+        }
+        .description-hp {
+            max-width: 100%;
+        }
+
+        header {
+  
+            img {
+                height: 5rem;
+                margin-top: -1.5rem;
+            }
+            .subtitle {
+                height: 2.2rem;
+                overflow: hidden;
+            }
+        }
+    }
 }

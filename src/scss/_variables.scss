@@ -10,12 +10,16 @@ $hover-btnColor: lighten($btnColor, 5%);
 $secondaryBtnColor: #e37e02;
 $hover-secondaryBtnColor: lighten($secondaryBtnColor, 5%);;
 
-$transparent: rgba(255, 255, 255, 0);
+
+$transparent: rgba(15, 15, 16, 0);
+$dark-transparent: rgba(15, 15, 16, 0.3);
 
 
 $jet-brains : 'JetBrainsMono', monospace;
 $graphik : 'Graphik', sans-serif;
 $chronicle : 'Chronicle', serif;
+
+$boder-radius: 2px;
 
 @mixin notDragable {
     user-drag: none;

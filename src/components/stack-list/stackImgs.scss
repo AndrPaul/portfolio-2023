@@ -1,9 +1,27 @@
 @import '../../scss/variables';
 
 
-.stack-logos{
-    img{
+.stack-logos {
+
+    display: flex;
+    flex-wrap: wrap;
+    .logos-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    img {
         height: 40px;
-        margin-right: 2rem;
+    }
+}
+
+
+@media (max-width: 586px) {
+    .stack-logos {
+        align-items: center;
+        justify-content: center;
+        .logos-wrapper {
+            text-align: center;
+        }
     }
 }

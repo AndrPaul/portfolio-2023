@@ -15,6 +15,7 @@ const navLinks = [
 
 function Navbar() {
     return (
+        <div className='nav-container'>
         <nav className='main-nav'>
             {navLinks.map(({ path, text, icon: Icon }, index) => (
                 path.startsWith('http') || path.startsWith('mailto') ? (
@@ -31,6 +32,7 @@ function Navbar() {
                 )
             ))}
         </nav>
+        </div>
     )
 }
 
