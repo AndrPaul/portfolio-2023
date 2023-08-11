@@ -7,6 +7,7 @@ import starWars from "../../assets/cards/starwars.png";
 import shaker from "../../assets/cards/shaker.png";
 import jqueryExam from "../../assets/cards/jqueryexam.png";
 import collins from "../../assets/cards/collins.png";
+import { motion } from "framer-motion";
 
 
 const projects = [
@@ -56,7 +57,10 @@ const projects = [
 
 function Portfolio() {
   return (
-    <div className="portfolio page">
+    <motion.div className="portfolio page"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}>
       <div className="heading">
         <h1>Portfolio</h1>
       </div>
@@ -72,7 +76,7 @@ function Portfolio() {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
