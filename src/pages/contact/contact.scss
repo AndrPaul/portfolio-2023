@@ -1,0 +1,85 @@
+@import '../../scss/variables';
+
+.form {
+    background-color: $dark-transparent;
+    border: 1px solid $primary-light;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    
+  
+
+    input {
+        padding: 1rem;
+    }
+    input:nth-child(1){
+        margin-right: 2rem;
+    }
+
+    input, textarea {
+        font-family: $graphik;
+    }
+
+    textarea{
+        padding: 1rem 1rem 8rem 1rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    button {
+        color: $primary-light;
+        text-transform: uppercase;
+        height: 3.4rem;
+        width: 12rem;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+        font-size: 1.1rem;
+        background-color: $secondaryBtnColor;
+        border-radius: 2px 0px 0px 2px;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        &:hover {
+            transition: background 0.5s;
+            background-color: $hover-secondaryBtnColor;;
+            border-bottom: 5px solid $primary-light;
+            border-top: 5px solid $transparent;
+        }
+
+        
+    }
+    
+    .inputs {
+        display: flex;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 679px) {
+        .form{
+            .inputs {
+                display: flex;
+                flex-direction: column;
+            }
+
+            input:nth-child(1){
+                margin-right: 0rem;
+                margin-bottom: 2rem;
+            }
+            input, textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+            
+        }
+
+
+
+}
